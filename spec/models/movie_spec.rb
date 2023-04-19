@@ -43,6 +43,15 @@ RSpec.describe Movie, type: :model do
           is_expected.to be_invalid
         end
       end
+      context 'When the release is nil' do
+        before do
+          movie.release = nil
+        end
+      
+        it do
+          is_expected.to be_invalid
+        end
+      end
     end
   end
 end
