@@ -20,20 +20,28 @@ class MovieController < ApplicationController
       render json: { message: "Movie created" }, status: :ok
     end
   end
+
+  def update
+    @update_movie = Movie.find(params[:id])
+    @update_movie.update!(update_params)
+    render json: @update_movie
+  end
+
   private
 
-  # def movie
-  #   Movie.find(params.require([:id]))
-  # end
+  def movie
+    Movie.find(params.require([:id]))
+  end
   
   def movies
     Movie.page(params[:page]).per(params[:page_size])
   end
 
   def movie_params
-    puts 'lista de parameters'
-    puts params
     params.permit(:title, :description, :release, :genre, :quantity, :rent_price, :image)
+  end
 
+  def update_params
+    params.require(:movie).permit(:title, :description, :release, :genre, :quantity, :rent_price)
   end
 end

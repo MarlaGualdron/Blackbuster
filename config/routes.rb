@@ -10,4 +10,9 @@ Rails.application.routes.draw do
   get '/movies' => 'movie#index'
   get '/movie/:id', to: 'movie#show'
   patch '/movies', to: 'movie#create'
+  put  '/movies/:id', to: 'movie#update'
+  get '/rents' => 'rent#index'
+  get '/rents/:id', to: 'rent#show'
+  patch '/rents', to: 'rent#create'
+
 end
