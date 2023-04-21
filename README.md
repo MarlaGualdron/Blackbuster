@@ -12,7 +12,7 @@ just make sure you have docker and docker-compose on your computer.
 Things you may want to know about:
 
 * Ruby version
-
+  ruby-2.7.8
 * System dependencies
 
 * Configuration
@@ -26,5 +26,5 @@ Things you may want to know about:
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
-
+Whenever you make changes to this project or when you want to start it for the first time, run ```docker-compose build```
 * ...
