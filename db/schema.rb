@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2023_04_21_023448) do
     t.float "rent_price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "available", default: false, null: false
+    t.boolean "available", default: true, null: false
   end
 
   create_table "users", force: :cascade do |t|
