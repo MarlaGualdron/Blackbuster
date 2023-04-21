@@ -41,4 +41,7 @@ Remember, every rails command you want to execute goes with the following script
 2. if this is the first time you initialize the project, I recommend that you run `docker-compose run --rm web rails db:create`
 3. Then you can run `docker-compose up`
 
+### Postman collection, just for fun 
+1. [Collection](https://www.postman.com/marlagualdron/workspace/ruby-backend/collection/13084314-94b6d2a3-3c6d-459b-8eaa-e24695b23f88?action=share&creator=13084314)
+
 Enjoy :)
