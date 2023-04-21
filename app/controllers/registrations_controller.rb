@@ -7,8 +7,4 @@ class RegistrationsController < Devise::RegistrationsController
       resource.save
       render_resource(resource)
     end
-
-    def render_resource(resource, _opts = {})
-    render json: resource
-    end
-  end
+end

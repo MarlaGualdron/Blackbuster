@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 class MovieController < ApplicationController
-  #before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :require_admin, only: [:create, :update]
 
   def index
     render json: movies, status: :ok
@@ -15,7 +16,6 @@ class MovieController < ApplicationController
 
   def create
     @movie = Movie.new(movie_params)
-    # @movie.image.attach(params[:image])
     if @movie.save!  
       render json: { message: "Movie created" }, status: :ok
     end

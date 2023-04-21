@@ -1,5 +1,12 @@
-require 'rails_helper'
-
 RSpec.describe Rent, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  subject(:rent) { build(:rent) }
+
+  it { should validate_presence_of(:from) }
+  it { should validate_presence_of(:to) }
+  it { should validate_presence_of(:user_id) }
+  it { should validate_presence_of(:movie_id) }
+
+  describe 'validations' do
+    it { is_expected.to be_valid }
+  end
 end

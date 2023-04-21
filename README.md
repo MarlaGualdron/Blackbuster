@@ -3,9 +3,13 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-This is a dockerized project so you will not have to install anything on your computer. 
+This is a dockerized project so you will not have to install anything on your computer, 
+just make sure you have docker and docker-compose on your computer.
 
-Things you may want to cover:
+[Docker](https://docs.docker.com/get-docker/).
+[Docker-compose](https://docs.docker.com/compose/install/).
+
+Things you may want to know about:
 
 * Ruby version
 

@@ -3,10 +3,9 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   it { should validate_presence_of(:name) }
   it { should validate_presence_of(:last_name) }
-  it { should validate_presence_of(:name) }
   it { should validate_presence_of(:email) }
   it { should validate_presence_of(:password) }
-  it { should validate_presence_of(:password_confirmation) }
+  it { should validate_confirmation_of(:password) }
  
   subject(:user) do
     create(:user)
@@ -25,32 +24,26 @@ RSpec.describe User, type: :model do
       it do
         is_expected.to be_invalid
       end
-      context 'When the password_confirmation is nil' do
-        before do
-          user.password_confirmation = nil
-        end
-      
-        it do
-          is_expected.to be_invalid
-        end
+    end
+    
+  
+    context 'When the name is nil' do
+      before do
+        user.name = nil
       end
-      context 'When the name is nil' do
-        before do
-          user.name = nil
-        end
       
-        it do
-          is_expected.to be_invalid
-        end
+      it do
+        is_expected.to be_invalid
       end
-      context 'When the mail is nil' do
-        before do
-          user.email = nil
-        end
+    end
+    
+    context 'When the email is nil' do
+      before do
+        user.email = nil
+      end
       
-        it do
-          is_expected.to be_invalid
-        end
+      it do
+        is_expected.to be_invalid
       end
     end
   end

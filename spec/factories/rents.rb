@@ -1,9 +1,10 @@
 FactoryBot.define do
   factory :rent do
-    from { "2023-04-21" }
-    to { "2023-04-21" }
-    rent_debt { 1.5 }
-    User { nil }
-    Movie { nil }
+    from { Faker::Date.backward(days: 1) }
+    to { Faker::Date.forward(days: 3) }
+    rent_debt { nil }
+    user { association :user }
+    movie { association(:movie) }
+    returned { false }
   end
 end

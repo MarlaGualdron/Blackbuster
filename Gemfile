@@ -69,6 +69,6 @@ end
 gem 'active_model_serializers', '~> 0.10.13'
 gem 'kaminari', '~> 1.2', '>= 1.2.2'
 gem 'devise', '~> 4.8', '>= 4.8.1'
-gem 'devise-jwt', '~> 0.9.0'
+gem 'devise-jwt', '~> 0.10.0'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
